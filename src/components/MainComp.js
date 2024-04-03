@@ -75,11 +75,17 @@ function MainComp(params) {
           {!releases?<></>:<>          
           <tbody className="max-h-full overflow-y-scroll">
             {releases.map((item)=>{
+              const checkStatus = () => {
+                if (item.status == 'Проверяется') return 'bg-orange-400'
+                if (item.status == 'Одобрен') return 'bg-green-500'
+                if (item.status == 'Отклонен') return 'bg-red-500'
+              }
+              const zalivka = checkStatus()
               return (<tr key={item.id} className='bg-slate-50 select-none cursor-pointer hover:scale-[102%] transition-all' onClick={()=>{userStore.getSongs(item.id);setPopUpData(item);openModal()}}>
                   <td className="tableContentText border-t-stone-400 border-solid border-r rounded-l-xl">{item.name} - {item.nickname}</td>
                   <td className="tableContentText border-t-stone-400 border-solid border-r">{item.releaseDate?item.releaseDate.split('T')[0].split('-').reverse().join('/'):''}</td>
                   <td className="tableContentText border-t-stone-400 border-solid border-r">{item.id}</td>
-                  <td className="tableContentText border-t-stone-400 border-solid border-r">{item.status}</td>
+                  <td className="tableContentText border-t-stone-400 border-solid border-r"><span className={`rounded-xl ${zalivka}`}>{item.status}</span></td>
                   <td className="tableContentText border-t-stone-400 border-solid rounded-r-xl">{item.upc?item.upc:'Не присвоен'}</td>
                 </tr>)
             })

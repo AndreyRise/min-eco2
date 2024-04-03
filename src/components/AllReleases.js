@@ -1,5 +1,4 @@
 import { observer } from "mobx-react-lite";
-import { useNavigate } from "react-router-dom";
 import { Context } from "../index.js";
 import { useContext, useEffect, useState } from "react";
 import ReleaseInfo from "./AdminReleaseInfo.js";
@@ -8,7 +7,6 @@ import ReleaseInfo from "./AdminReleaseInfo.js";
 function AllReleasesComp(params) {
   
 const {userStore} = useContext(Context);
-const navigate = useNavigate();
 
 const [isOpen, setIsOpen] = useState(false)
 const [popUpData,setPopUpData] = useState(null);
@@ -27,10 +25,6 @@ function closeModal() {
 function openModal() {
   setIsOpen(true)
 }
-
-// useEffect(() => {
-//   if (userStore.user.role !== 'ADMIN') navigate('/login');
-// }, [])
 
 useEffect(() => {
   userStore.getAllReleases(userStore.user.id)

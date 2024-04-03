@@ -114,14 +114,14 @@ function AdminReleaseInfo(props) {
                     </div>
                     </>:<>
                     </>}
-                  <div className='rounded-2xl p-4 min-w-[216px] bg-white flex flex-col md:flex-row w-full shadow-md pt-2 pb-2 gap-2'>
-                    <div className='flex flex-1 flex-col gap-2'>
+                  <div className='rounded-2xl p-4 min-w-[216px] bg-white flex flex-col w-full shadow-md pt-2 pb-2 gap-2'>
+                    <div className='flex flex-1 flex-col gap-2 break-words'>
                       <p>Дата релиза: <span className='font-semibold'>{props.popUpData.releaseDate.split('T')[0].split('-').reverse().join('/')}</span></p>
                       <p>Жанр: <span className='font-semibold'>{props.popUpData.genre}</span></p>
                       <p>Тип: <span className='font-semibold'>{props.popUpData.type}</span></p>
                       <p>Социальные сети: <span className='font-semibold'>{props.popUpData.socLinks}</span></p>
                     </div>
-                    <div className='flex flex-1 flex-col gap-2'>
+                    <div className='flex flex-1 flex-col gap-2 break-words'>
                       <p>Всего треков: <span className='font-semibold'>{props.popUpData.totalSongs}</span></p>
                       <p>Права на биты: <span className='font-semibold'>{props.popUpData.proofUrl}</span></p>
                       <p>Статус: <span className='font-semibold'>{props.popUpData.status}</span></p>
@@ -135,9 +135,9 @@ function AdminReleaseInfo(props) {
                 }
                   
                   {props.popUpData.proofUrl?<>
-                    <div className='flex flex-col rounded-2xl p-4 min-w-[216px] bg-white shadow-md gap-2'>
+                    <div className='flex flex-col rounded-2xl p-4 min-w-[216px] bg-white shadow-md gap-2 break-words'>
                       <span className='font-semibold text-lg'>Информация о битах:</span>
-                      <a href={props.popUpData.proofUrl} target='_blank' className='font-light text-blue-400'>{props.popUpData.proofUrl}</a>
+                      <a href={props.popUpData.proofUrl} target='_blank' className='font-light text-blue-400 break-words'>{props.popUpData.proofUrl}</a>
                     </div>
                     </>:<>
                     </>}
@@ -148,6 +148,14 @@ function AdminReleaseInfo(props) {
                       return <div key={item.id} className='flex flex-col rounded-2xl p-4 min-w-[216px] bg-white shadow-md gap-2'>
                         <span className='font-light'>{item.name} - {item.nickname}</span>
                         <audio src={`https://min.eco/uploads/song/?${userStore.user.id}?${item.fileUri}`} className='w-full' controls/>
+                        <div className='flex flex-col w-full gap-2'>
+                          <span className='font-semibold text-lg'>Текст:</span>
+                          <p>
+                            {item.lyrics}
+                          </p>
+                          <span className='font-semibold text-lg'>Момент для ТТ: {item.ttMoment}</span>
+                          <span className='font-semibold text-lg'>18+: {item.pg18}</span>
+                        </div>
                       </div>
                     }):
                     <></>}
