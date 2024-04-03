@@ -1,0 +1,19 @@
+.LoginPage{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LoginForm{
+  
+  background: rgb(238,249,255);
+  background: -moz-linear-gradient(135deg, rgba(238,249,255,1) 0%, rgba(220,240,255,1) 64%, rgba(251,240,255,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(238,249,255,1) 0%, rgba(220,240,255,1) 64%, rgba(251,240,255,1) 100%);
+  background: linear-gradient(135deg, rgba(238,249,255,1) 0%, rgba(220,240,255,1) 64%, rgba(251,240,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eef9ff",endColorstr="#fbf0ff",GradientType=1);
+
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+}

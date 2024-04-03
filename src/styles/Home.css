@@ -1,0 +1,25 @@
+.HelloPage {
+  min-height: 100vh;
+  height: min-content;
+  width: 100%;
+  min-width: max-content;
+  display: flex;
+  justify-content: center;
+}
+.emojiEdit{
+  -webkit-filter: drop-shadow(93px 49px 19px #000);
+  filter: drop-shadow(12px 15px 12px rgba(34, 60, 80, 0.6));
+  transition: all 0.5s ease-in;
+  animation: move 3s infinite ease-in-out;
+}
+@keyframes move {
+  0%{
+    transform:translate(0px,0);
+  }
+  50%{
+    transform:translate(0,15px);
+  }
+  100%{
+    transform:translate(0px,0);
+  }
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Bilya Layered';
+    src: local('Bilya Layered BASE'), local('Bilya-Layered-BASE'),
+        url('BILYALAYEREDBASE.woff2') format('woff2'),
+        url('BILYALAYEREDBASE.woff') format('woff'),
+        url('BILYALAYEREDBASE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.fontBilya{
+  font-family: 'Bilya Layered';
+}

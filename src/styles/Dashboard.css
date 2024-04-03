@@ -1,0 +1,73 @@
+.dashboardNavbar{
+    -webkit-filter: drop-shadow(93px 49px 19px #000);
+    filter: drop-shadow(0px 3px 12px rgba(34, 60, 80, 0.3));
+}
+.menuBtn{
+  -webkit-filter: drop-shadow(93px 49px 19px #000);
+  filter: drop-shadow(0px 2px 6px rgba(34, 60, 80, 0.6));
+}
+.navLogo{
+  -webkit-filter: drop-shadow(93px 49px 19px #000);
+  filter: drop-shadow(0px 0px 3px rgba(34, 60, 80, 0.6));
+}
+.navBarBtn{
+  scale: 96%;
+  display: flex;
+  gap: 16px;
+  font-size:medium;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 15px;
+  text-align: left;
+  border-radius: 8px;
+  transition-property: all;
+  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.navBarBtn:hover{
+  background-color:#d2f1fa;
+  color: #85144B;
+}
+.divWrap{
+   
+  background: rgb(238,249,255);
+  background: -moz-linear-gradient(135deg, rgba(238,249,255,1) 0%, rgba(220,240,255,1) 64%, rgba(251,240,255,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(238,249,255,1) 0%, rgba(220,240,255,1) 64%, rgba(251,240,255,1) 100%);
+  background: linear-gradient(135deg, rgba(238,249,255,1) 0%, rgba(220,240,255,1) 64%, rgba(251,240,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eef9ff",endColorstr="#fbf0ff",GradientType=1);
+
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 12px 1px rgba(34, 60, 80, 0.2);
+
+  min-width: 216px;
+
+  padding: 16px;
+
+  border-radius: 16px;
+}
+.divText{
+  font-size:smaller;
+  margin-bottom: 16px;
+}
+.tableText{
+  font-size:medium;
+  padding: 0 10px;
+  text-align: center;
+}
+.tableContentText{
+  font-size:medium;
+  padding: 0 10px;
+  text-align: center;
+  font-weight: 400;
+  padding: 14px 8px;
+  background-color: white;
+}
+.popUpText{
+  font-size:medium;
+  color:#292929;
+  margin-bottom: 4px;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
