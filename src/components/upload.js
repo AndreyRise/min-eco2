@@ -253,6 +253,7 @@ function UploadComp(props) {
       }
     } else {
       alert('Введите всю нужную информацию о релизе!');
+      setLoading(false);
       return;
     }
   }
