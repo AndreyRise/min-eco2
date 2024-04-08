@@ -154,6 +154,8 @@ function AdminReleaseInfo(props) {
                             {item.lyrics}
                           </p>
                           <span className='font-semibold text-lg'>Момент для ТТ: {item.ttMoment}</span>
+                          <span className='font-semibold text-lg'>ФИО битмейкера: {item.beatFio}</span>
+                          <span className='font-semibold text-lg'>ФИО автора: {item.authorFio}</span>
                           <span className='font-semibold text-lg'>18+: {item.pg18}</span>
                         </div>
                       </div>
