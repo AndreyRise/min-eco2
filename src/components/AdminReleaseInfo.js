@@ -19,7 +19,10 @@ function AdminReleaseInfo(props) {
     const user = await UserService.findUser(props.popUpData.userId);
     setUser(user.data.user);
   }
-  getUser()
+
+  useEffect(() => {
+    getUser()
+  }, [])
 
   return (
     <>
