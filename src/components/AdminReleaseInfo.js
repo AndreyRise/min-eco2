@@ -62,7 +62,7 @@ function AdminReleaseInfo(props) {
                         <button
                           type="button"
                           className="inline-flex justify-center rounded-md border border-transparent bg-red-200 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition-all"
-                          onClick={async ()=>{setOpen(!open); props.closeModal();await userStore.deleteRelease(props.popUpData.id,coverName,userStore.songs).then(props.loader(true));await userStore.getAllReleases(userStore.user.id).then(props.loader(false))}}
+                          onClick={async ()=>{setOpen(!open); props.closeModal();props.page(1);await userStore.deleteRelease(props.popUpData.id,coverName,userStore.songs);await userStore.getAllReleases(userStore.user.id)}}
                         >
                           Удалить
                         </button>

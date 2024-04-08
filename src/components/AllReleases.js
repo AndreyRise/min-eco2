@@ -98,7 +98,7 @@ useEffect(() => {
             </tbody></>}
           </table>
           {isOpen?
-            <ReleaseInfo isOpen={isOpen} closeModal={closeModal} openModal={openModal} popUpData={popUpData} loader={setLoading}/>:
+            <ReleaseInfo isOpen={isOpen} closeModal={closeModal} openModal={openModal} popUpData={popUpData} page={setPage}/>:
             <></>
           }
           {!releases?<>
